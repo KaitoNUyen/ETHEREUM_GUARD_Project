@@ -35,6 +35,7 @@ data/sample/*.csv
 !artifacts/scalers/*.joblib
 
 # Jupyter & IDE
+.agents/
 .ipynb_checkpoints/
 .vscode/
 .idea/
