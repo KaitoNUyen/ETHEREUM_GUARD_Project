@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-11-13T04:40:23.441111+00:00",
+  "seed": 42,
+  "requested_addresses": 1000,
+  "actual_addresses": 1000,
+  "transactions_in_induced_graph": 246295,
+  "known_phishing_addresses": 125,
+  "verified_normal_addresses": 64,
+  "unlabeled_addresses": 811,
+  "transactions_with_null_receiver_excluded": 1,
+  "selection_policy": "All observed known-phishing addresses first (up to requested size), then highest-activity observed addresses; deterministic tie ordering.",
+  "edge_policy": "Keep only transactions with both endpoints in selected address set.",
+  "label_policy": "1=known phishing, 0=verified normal only, -1=unlabeled.",
+  "files": {
+    "transactions": "data\\sample\\transactions.parquet",
+    "address_labels": "data\\sample\\address_labels.parquet"
+  }
+}

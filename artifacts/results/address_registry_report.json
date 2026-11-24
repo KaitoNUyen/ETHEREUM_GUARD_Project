@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "label_policy": {
+    "1": "Known phishing address found in MDBChain filename list",
+    "0": "Address explicitly listed in verified_benign_addresses.txt",
+    "-1": "Unlabeled; not verified benign or phishing"
+  },
+  "inputs": {
+    "transaction_files": [
+      {
+        "file": "ethereum__transactions__02640567_to_02765542.parquet",
+        "rows": 37442
+      },
+      {
+        "file": "ethereum__transactions__14666567_to_14791542.parquet",
+        "rows": 909819
+      },
+      {
+        "file": "ethereum__transactions__18416567_to_18541542.parquet",
+        "rows": 753668
+      },
+      {
+        "file": "ethereum__transactions__19416567_to_19541542.parquet",
+        "rows": 917668
+      }
+    ],
+    "mdbchain_directory": "data\\raw\\mdbchain",
+    "known_phishing_addresses_in_source": 1709,
+    "verified_benign_file": "data\\raw\\verified_benign_addresses.txt",
+    "verified_benign_addresses_in_source": 86
+  },
+  "summary": {
+    "total_transactions_scanned": 2618597,
+    "unique_addresses_in_sample": 1791594,
+    "known_phishing_addresses_found_in_sample": 125,
+    "verified_benign_addresses_found_in_sample": 86,
+    "unlabeled_addresses_in_sample": 1791383,
+    "binary_metrics_ready": true,
+    "transactions_involving_known_phishing_addresses": 301,
+    "known_phishing_addresses_not_seen_in_sample": 1584
+  },
+  "output": "data\\processed\\address_registry\\address_labels.parquet",
+  "note": "The registry is limited to addresses observed in the processed transaction samples. Label 0 is assigned only from the explicit verified-benign file. Label -1 means unlabeled, not benign. The transaction count involving known phishing addresses is not a count of independently verified phishing transactions."
+}

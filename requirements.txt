@@ -1,0 +1,23 @@
+# Core Data & ML
+numpy>=2.0.0,<3.0.0
+pandas>=2.2.0,<4.0.0
+pyarrow>=18.0.0
+scikit-learn>=1.7.0,<2.0.0
+joblib>=1.4.0
+PyYAML>=6.0.0
+tqdm>=4.66.0
+matplotlib>=3.9.0
+
+# API & Dashboard Serving
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+streamlit>=1.40.0
+httpx>=0.27.0
+
+# Deep Learning & Baselines (install platform-matched PyTorch / PyG wheels as needed)
+torch>=2.5.0
+torch-geometric>=2.6.0
+xgboost>=2.1.0
+numba>=0.60.0
+ipykernel>=6.29.0

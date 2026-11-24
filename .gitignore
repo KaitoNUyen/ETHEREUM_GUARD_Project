@@ -1,0 +1,48 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Secrets (NEVER commit API keys)
+.env
+.env.local
+.env.*.local
+
+# Large Raw & Processed Multi-GB Datasets (exceed GitHub 100MB file limit)
+data/raw/
+data/processed/
+data/cache/
+data/sample/ethereum__*
+data/sample/*.csv
+
+# Keep compact runnable sample fixture & lightweight (<4.5 MB total) trained checkpoints + scalers
+!data/sample/transactions.parquet
+!data/sample/address_labels.parquet
+!data/sample/sample_manifest.json
+!artifacts/checkpoints/*.pt
+!artifacts/checkpoints/*.pkl
+!artifacts/scalers/*.joblib
+
+# Jupyter & IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & Temp
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
